@@ -1,0 +1,41 @@
+@model IEnumerable<hoangcam0256.Models.NHC256SanPham>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NHC256TenSanPham)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NHC256Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NHC256TenSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NHC256Address)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NHC256MaSanPham">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NHC256MaSanPham">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NHC256MaSanPham">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
