@@ -13,4 +13,6 @@ using hoangcam0256.Models;
         }
 
         public DbSet<hoangcam0256.Models.NHC256SanPham> NHC256SanPham { get; set; } = default!;
+
+        public DbSet<hoangcam0256.Models.NHC256DonHang> NHC256DonHang { get; set; } = default!;
     }
